@@ -1,14 +1,15 @@
 class Building:
-    total = 0
+    """Здание"""
+    total = 0  # Количество зданий
 
     def __init__(self):
-        Building.total += 1
+        Building.total += 1  # Создаём новые здания
+        print(Building.total)  # И каждое созданное здание выводим на консоль
 
 
-obj = []
-obj_size = 40
-while len(obj) < obj_size:
-    new_obj = Building()
-    obj.append(new_obj)
-
-print(Building.total)
+# Чтобы метод __init__ работал, нам нужен цикл. Для этого:
+obj = []  # Создаём список, где будут находиться все наши здания
+obj_size = 40  # Необходимое количество зданий
+while len(obj) < obj_size:  # Пока количество зданий меньше необходимого:
+    new_obj = Building()  # создаются новые здания new_obj
+    obj.append(new_obj)  # и добавляются в список obj и выводятся на консоль благодаря print в __init__
